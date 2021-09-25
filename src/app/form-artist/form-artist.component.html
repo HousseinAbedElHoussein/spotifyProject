@@ -1,0 +1,29 @@
+
+<mat-card  (click)="toAlbums()" fxFlex [style.background-color]="'white'" class="mat-elevation-z3">
+    <mat-card-header class="profile-card-header">
+        <mat-card-title>
+            <img #profileimage *ngIf="detail.images.length>0"  [style.height.px]="profileimage.offsetWidth/1.5" mat-card-image src="{{detail.images[0].url}}" />
+            <img #profileimage *ngIf="detail.images.length==0"  [style.height.px]="profileimage.offsetWidth/1.5" mat-card-image src="../../assets/images/user.png" />
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content fxLayout="column" fxLayoutAlign="space-between start">
+        
+        <div fxFlex  fxLayout="row" class="artist-name"><span matTooltip="{{ detail.name }}">{{detail.name}}</span></div>
+        <div class="cont-detail" style="width:100%"  fxLayout="row" fxLayoutAlign="none start">
+            <div  fxLayout="row" fxFlex="15%" class="type" ><Span  matTooltip="{{detail.type}}">  {{detail.type}}</Span>  </div>   
+            <div  fxLayout="row" fxFlex="60%" class="followers"> <span  matTooltip="{{detail.followers.total}} followers ">{{detail.followers.total}} followers</span> </div>
+            <Div  matTooltip="{{ detail.popularity/20 }} (5) " class="cont-raiting" fxFlex="25%"  fxLayout="row" fxLayoutAlign="none start">
+                <mat-icon fxFlex="30%"  class="icon-star" svgIcon="star"> </mat-icon>
+                <div fxFlex="45%" fxLayout="row" class="font-rate">
+                    <span>     {{ detail.popularity/20 }} </span>
+              
+                </div>
+                <div fxFlex="25%"  fxLayout="row" class="font-view"><span>(5)</span></div>
+            </Div>
+     
+        </div>
+
+    
+
+    </mat-card-content>
+</mat-card>

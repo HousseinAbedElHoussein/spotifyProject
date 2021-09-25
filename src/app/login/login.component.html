@@ -1,0 +1,13 @@
+
+<div class="container" fxLayout="column" [ngStyle]="{'height.px': maxHeight}"  fxLayoutAlign="none start" > 
+    <div fxFlex="20%" class="header">
+        <div class="item" fxLayout="row"  fxLayoutAlign="none start">
+            <mat-icon  class="icon-spotify" svgIcon="spotify"></mat-icon>
+            <!-- <span  class="title">Spotify</span> -->    
+        </div>
+    </div>
+
+    <div  fxFlex="80%" class="action">
+        <button  fxFlex="40%" mat-raised-button  (click)="login()" >Login with Spotify</button>
+    </div>
+</div>

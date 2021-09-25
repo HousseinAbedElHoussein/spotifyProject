@@ -1,0 +1,25 @@
+
+<mat-card  fxFlex [style.background-color]="'white'" class="mat-elevation-z3">
+    <mat-card-header class="profile-card-header">
+        <mat-card-title>
+            <img #profileimage *ngIf="detail.images.length>0"  [style.height.px]="profileimage.offsetWidth/1.5" mat-card-image src="{{detail.images[0].url}}" />
+            <img #profileimage *ngIf="detail.images.length==0"  [style.height.px]="profileimage.offsetWidth/1.5" mat-card-image src="../../assets/images/default.png" />
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content fxLayout="column" fxLayoutAlign="space-between start">
+        
+        <div   fxLayout="row" class="album-name"><span matTooltip="{{ detail.name }}">{{detail.name}}</span></div>
+        <div   fxLayout="row" class="artists"><span matTooltip="{{ artists }}">{{artists}}</span></div>
+        <div fxFlex class="cont-detail" style="width:100%"  fxLayout="row" fxLayoutAlign="none start">
+            <div  fxLayout="row" fxFlex="26%" class="type" ><Span  matTooltip="{{detail.album_type}}">  {{detail.album_type}}</Span>  </div>   
+            <div  fxLayout="row" fxFlex="48%" class="traks"> <span  matTooltip="{{detail.total_tracks}} traks ">{{detail.total_tracks}} traks</span> </div>
+            <div  fxLayout="row" fxFlex="26%" class="date"> <span  matTooltip="{{detail.release_date}}  ">{{detail.release_date}}</span> </div>
+        </div>
+        <div fxFlex  fxLayout="row" class="actions">
+            <a   mat-button href="{{detail.external_urls.spotify}}" target="_blank">Preview on Spotify</a>
+
+        </div>
+
+    </mat-card-content>
+
+</mat-card>

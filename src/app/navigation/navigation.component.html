@@ -1,0 +1,13 @@
+<div  *ngIf="tokenService.loadToken()!=null" class="toolbar" role="banner">
+    <div  fxLayout="row" fxLayoutAlign="space-between" >
+    <button   mat-raised-button type="button"  >
+      SpotifyApp
+    </button>
+    <button (click)="toSearch()"  mat-raised-button  type="button"  >
+        Search
+      </button>
+    <button (click)="Login()"  mat-raised-button  type="button"  >
+        Login
+      </button>
+    </div>
+</div>

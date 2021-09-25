@@ -1,0 +1,157 @@
+@import "../app.component.less";
+
+mat-card {
+  background-color: @grayBackground !important;
+  border-radius: 20px;
+  color: @graytext !important;;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+
+}
+.actions{
+    display: flex;
+    justify-content:center !important;
+    width: 100%;
+    a{
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+}
+mat-card-header{
+  width:100%;
+  ::ng-deep .mat-card-header-text{
+    width: 100% !important;
+  }
+  mat-card-title{
+    width:100%;
+    .mat-card-image {
+      border-top-left-radius: 20px !important;
+      border-top-right-radius: 20px !important;
+      margin: 0 0 0 -16px !important;
+   
+    }
+  }
+}
+.type{
+
+  color: #7a7a7a;
+  margin-top: 1px;
+  span{
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+}
+.date{
+    display: flex;
+  justify-content:center;
+  span{
+    color:#7a7a7a !important;
+    margin-top:2px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+  
+}
+.traks{
+  display: flex;
+  justify-content:center;
+  span{
+    color:#7a7a7a !important;
+    margin-top:2px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+
+}
+mat-card-content{
+  padding: 10px;
+}
+.font-rate {
+  font-size: 14px;
+  color: #b8b8b8;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-right: 2px;
+  display: flex;
+  justify-content: center;
+  span{
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+}
+
+
+
+
+.icon-star {
+  width: 20px;
+  height: 20px;
+  color: rgb(150, 150, 150);
+}
+.font-view {
+  margin-top: 5px;
+  font-size:11px;
+  color: rgb(184, 184, 184);
+  span{
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+}
+
+.artists{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    color: #7a7a7a;
+    font-size: 13px;
+  span{
+    padding-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  } 
+}
+.album-name{
+  display: flex;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  color: @greenLight;
+  font-size: 18px;
+font-weight: 500;
+span{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+}
+.cont-detail{
+padding-top: 15px;
+    padding-bottom: 15px;
+    width:100%;
+
+}
+.cont-raiting{
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,0 +1,57 @@
+.artistDetail{
+    width: 100%;
+    border-bottom: 1px solid #d9dadc;
+    // display: flex !important;;
+    // justify-content: center !important;
+    // align-items: center !important;;
+}
+.img-name-artist{
+    width:90%;
+    height:90%;
+    padding-left: 15px;
+    padding-top: 15px;
+    img{
+        height: 100% !important;
+         border-radius: 50%;
+        //  display: inline-block;       
+    }
+    .artistname{
+        height: 90%;
+        justify-content: center;
+        padding-left: 10px;
+        .artist{
+            font-weight: 500;
+            color:#7a7a7a;
+            h1{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        .album{
+            font-size: 15px;
+            color:#7a7a7a;
+            margin-left: 10px;
+            span{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    
+}
+.artistscontainer::-webkit-scrollbar {
+    display: none;
+}
+  .artistscontainer{
+    width:100%;
+    padding:20px;
+    overflow-y: auto ;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    overflow-x: hidden;
+  }
+  .form-album{
+    padding-bottom: 4%;
+  }

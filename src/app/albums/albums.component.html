@@ -1,0 +1,22 @@
+<div  class="container" fxLayout="column" [ngStyle]="{'height.px': maxHeight}"  fxLayoutAlign="none start" >
+    <div fxFlex="25%" class="artistDetail"  fxLayout="column" fxLayoutAlign="none start" >
+        <div class="img-name-artist"  fxLayout="row" fxLayoutAlign="none start" >
+            <img fxFlex="10%" #profileimg  src="{{artistDetail.imgURL}}" />
+            <div fxFlex  class="artistname" fxLayout="column">
+                <div  class="artist"   fxLayout="row">
+                    <h1  >{{artistDetail.name}}</h1>
+                </div>
+                <div  class="album" fxLayout="row"> 
+                    <span  >
+                        {{artistDetail.type}}
+                    </span>
+                </div>
+
+            </div>
+      
+        </div>   
+    </div>
+    <Div (scroll)="getPaginationInfo($event)"  [style.background-color]="albums.length>0 ? '#A9A9A9' :'white'"  fxFlex="75%" class="artistscontainer" fxLayout="row wrap" fxLayoutAlign="none start" >
+        <app-form-album class="form-album"  [ngStyle]="{'margin-left': (i%4!=0) ? '4%' : '0%'}" style="margin-left: 4%;" *ngFor="let element of albums;let i=index"  [detail]="element" fxFlex="22%"></app-form-album>
+    </Div>
+</div>

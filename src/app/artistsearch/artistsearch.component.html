@@ -1,0 +1,18 @@
+<div  class="container" fxLayout="column" [ngStyle]="{'height.px': maxHeight}"  fxLayoutAlign="none start" >
+    <div fxFlex="20%" *ngIf="data.length==0 && searchKey.length<3 " class="item" fxLayout="row"  fxLayoutAlign="none start">
+        <mat-icon  class="icon-spotify" svgIcon="spotify"></mat-icon>
+        <!-- <span  class="title">Spotify</span> -->    
+    </div>
+    <div  [fxFlex]="(data.length>0 && searchKey.length>=3)?'20%':'80%'" class="cont-search">
+        
+        <mat-form-field  class="input-keyword-team" appearance="outline">
+            <mat-label>Search for an artist...</mat-label>
+            <input (keyup)="search($event)" [(ngModel)]="searchKey" (keydown.enter)="search($event)" matInput />
+            <mat-icon matSuffix svgIcon="search" class="search-color"></mat-icon>
+         </mat-form-field>
+    </div>
+
+    <Div (scroll)="getPaginationInfo($event)" *ngIf="data.length>0  && searchKey.length>=3 " [style.background-color]="data.length>0 ? '#A9A9A9' :'white'" fxFlex="80%" class="artistscontainer" fxLayout="row wrap" fxLayoutAlign="space-between start" >
+        <app-form-artist style="padding-bottom: 4%;" *ngFor="let element of data" (toalbums)="toAlbums($event)"  [detail]="element" fxFlex="22%"></app-form-artist>
+    </Div>
+</div>
